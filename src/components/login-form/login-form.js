@@ -1,14 +1,20 @@
-import React from "react";
-import { ReactDOM } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
+import { fetchToken } from "../Auth/auth.js";
 import "./login-form.css";
 
 class LoginForm extends React.Component {
   render() {
     return (
-      <div id="loginform">
-        <FormHeader title="РАМЗЭС 3.0" />
-        <Form />
-      </div>
+        {fetchToken() ? (
+            <div id="loginform">
+            <p>you are logged in</p>
+            </div>
+        ): 
+        (<div id="loginform"> 
+            <FormHeader title="РАМЗЭС 3.0" /> 
+            <Form />);
+            </div>}
     );
   }
 }
@@ -43,5 +49,19 @@ const FormInput = (props) => (
     <input type={props.type} placeholder={props.placeholder} />
   </div>
 );
+
+function Login() {
+  const navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const login = () => {
+    if ((username = "") && (password = "")) {
+      return;
+    } else {
+      //
+    }
+  };
+}
 
 export default LoginForm;
