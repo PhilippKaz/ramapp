@@ -1,23 +1,32 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router";
-import { fetchToken } from "../Auth/auth.js";
+import React from "react";
 import "./login-form.css";
 
 class LoginForm extends React.Component {
   render() {
     return (
-        {fetchToken() ? (
-            <div id="loginform">
-            <p>you are logged in</p>
+      <div className="content">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <FormImages />
             </div>
-        ): 
-        (<div id="loginform"> 
-            <FormHeader title="РАМЗЭС 3.0" /> 
-            <Form />);
-            </div>}
+            <div id="loginform">
+              <Form />
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
+
+const FormImages = (props) => (
+  <img
+    src={require("../others/images/auth.png")}
+    alt="Image"
+    className="img-fluid"
+  />
+);
 
 const FormHeader = (props) => <h2 id="headerTitle">{props.title}</h2>;
 
@@ -49,19 +58,5 @@ const FormInput = (props) => (
     <input type={props.type} placeholder={props.placeholder} />
   </div>
 );
-
-function Login() {
-  const navigate = useNavigate();
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  const login = () => {
-    if ((username = "") && (password = "")) {
-      return;
-    } else {
-      //
-    }
-  };
-}
 
 export default LoginForm;

@@ -27,7 +27,7 @@ html {
   padding: 2rem 0;
   margin: 0;
   font-size: 2rem;
-  color: #f4a900;
+  color: #f15a2b;
 }
 
 .row {
@@ -79,7 +79,7 @@ html {
   font-size: 1.3rem;
   color: white;
   font-weight: 700;
-  background: #ffa500;
+  background: #f15a2b;
   border: 0px;
   cursor: pointer;
   transition: opacity 0.25s ease-out;
@@ -91,27 +91,6 @@ html {
 
 #button {
   padding-bottom: 1.5rem;
-}
-
-#facebookIcon {
-  background-image: url("https://image.flaticon.com/icons/svg/145/145802.svg");
-  background-repeat: no-repeat;
-  width: 3rem;
-  height: 3rem;
-}
-
-#twitterIcon {
-  background-image: url("https://image.flaticon.com/icons/svg/145/145812.svg");
-  background-repeat: no-repeat;
-  width: 3rem;
-  height: 3rem;
-}
-
-#googleIcon {
-  background-image: url("https://image.flaticon.com/icons/svg/145/145804.svg");
-  background-repeat: no-repeat;
-  width: 3rem;
-  height: 3rem;
 }
 
 #iconGroup {
@@ -128,4 +107,8 @@ html {
   text-align: center;
   padding-top: 2rem;
   margin-top: 1.5rem;
+}
+
+.row {
+  flex-direction: row;
 }
