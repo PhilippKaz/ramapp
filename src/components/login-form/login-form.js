@@ -11,6 +11,7 @@ import {
   MDBInput,
 } from "mdb-react-ui-kit";
 import "./login-form.css";
+import { UserProvider } from "../../context/UserContext";
 
 class LoginForm extends React.Component {
   render() {
